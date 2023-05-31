@@ -3,7 +3,7 @@ Course Project for Software Design Techniques and Mechanisms course at Technical
 
 # Table of Contents
 
-1. [Introduction](Introduction)
+1. [Introduction](#introduction)
 2. [Creational Design Patterns](#Creational-Design-Patterns)
    - [Builder Pattern](#Builder-Pattern)🏗️
    - [Prototype Pattern](#Prototype-Pattern) 🧬
