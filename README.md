@@ -501,3 +501,96 @@ Here's a UML diagram to illustrate the relationships involved in the Template Me
 In the diagram, `AbstractOrderSaveTemplate` represents the abstract template class, and `BasicStoreOrderLogic` is the concrete subclass that provides specific implementations for the abstract methods.
 
 By applying the Template Method pattern, the GadgetDelivery application achieves a reusable and extensible structure for saving orders. The template method provides a defined algorithm with customizable steps that can be overridden by subclasses to adapt the behavior to specific requirements.
+
+# Application Overview
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/e84af73b-aed6-4dad-8c64-462e10e73fc7" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/dbdf46a9-df5d-455c-85e8-64c051745b76" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/6eb8e346-9e3f-4323-ab93-7f372ebeb3f5" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/b6254496-3e03-4ae3-9cce-105d358358ca" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/310974b7-360b-4aa9-b0ce-5abc58a9859e" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/8097cfce-32ce-4c07-a2bb-a0cd69b34f9f" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/2b0f84ae-0b1b-412b-b8e5-b598504967d7" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/6360873d-b374-47cd-ad8d-5aff4c1287bc" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/50237a80-1a68-45f9-b090-75608a93245d" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/7d1b1a3b-6b1a-43f6-95bc-4b610ff78773" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/1eebed12-12f6-4fca-b4f1-aaaa37e3e7c9" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/016b38ad-0962-4366-84cc-8f4107c8900e" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/37c05551-2ebf-4608-8ed2-f1c3ec228717" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
