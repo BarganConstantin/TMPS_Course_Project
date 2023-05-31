@@ -90,7 +90,12 @@ The Builder pattern provides several benefits in the GadgetStorage application. 
 
 To visualize the implementation of the Builder pattern in the GadgetStorage application, the following UML diagram illustrates the relationships between the builder classes and their interactions:
 
-![Builder Pattern UML Diagram](https://chat.openai.com/c/path_to_builder_pattern_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/164970200-7e2c3923-48c4-4b81-8f77-2b0ba18ddcda.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `AbstractGadgetBuilder` serves as the abstract builder class, while the concrete builder classes (`PhoneBuilder`, `SmartWatchBuilder`, and `TabletBuilder`) implement the specific construction logic for each gadget type. The product classes (`AbstractPhone`, `AbstractSmartWatch`, and `AbstractTablet`) represent the final constructed objects.
 
@@ -177,7 +182,12 @@ The same Singleton pattern implementation is applied to the `AbstractProductStor
 
 To visualize the implementation of the Singleton pattern in the GadgetStorage application, the following UML diagram illustrates the relationships between the storage classes and their interactions:
 
-![Singleton Pattern UML Diagram](https://chat.openai.com/c/path_to_singleton_pattern_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/164970200-7e2c3923-48c4-4b81-8f77-2b0ba18ddcda.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `AbstractOrderStorage` and `AbstractProductStorage` serve as the singleton classes that manage the instances of the `_orders` and `_gadgets` lists respectively. The concrete classes, `InMemoryOrderStorage` and `InMemoryProductStorage`, implement the specific storage logic and utilize the singleton instance.
 
@@ -208,7 +218,12 @@ The same pattern is applied to the `RoadLogistics` and `SeaLogistics` classes, w
 
 To visualize the implementation of the Factory Method pattern in the GadgetDelivery application, the following UML diagram illustrates the relationships between the logistics and transport classes:
 
-![Factory Method Pattern UML Diagram](https://chat.openai.com/c/path_to_factory_method_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/164970200-7e2c3923-48c4-4b81-8f77-2b0ba18ddcda.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `AbstractLogistics` serves as the creator class with the factory method `createTransport()`. The concrete creator classes, such as `AirLogistics`, `RoadLogistics`, and `SeaLogistics`, override the factory method to create specific transport objects. The transport classes, `Plane`, `Truck`, and `Ship`, implement the `ITransport` interface.
 
