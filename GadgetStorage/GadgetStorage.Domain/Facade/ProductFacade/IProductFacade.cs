@@ -12,5 +12,6 @@ namespace GadgetStorage.Domain.Facade.ProductFacade
         void RegisterProduct();
         void RemoveProduct(AbstractGadget product);
         void PrintProducts();
+        void SortProducts();
     }
 }

@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using GadgetStorage.Domain.SingletonServices.ProductsStorage;
 using GadgetStorage.Domain.SingletonServices.OrdersStorage;
 using GadgetStorage.Domain.Adapter;
+using System.Threading;
 
 namespace GadgetStorage.Domain.Facade.OrderFacade
 {
@@ -29,7 +30,8 @@ namespace GadgetStorage.Domain.Facade.OrderFacade
         public void RegisterOrder()
         {
             Console.Clear();
-            Console.WriteLine("Register new order");
+            _consolePrintUtils.PrintOnCenterWithColour("Register new order");
+            Console.WriteLine();
 
             PrintStorageProducts();
             var id = GetSelectedProductId();
@@ -38,7 +40,15 @@ namespace GadgetStorage.Domain.Facade.OrderFacade
 
             IOrder order = new BasicOrder(product);
 
+            Console.Clear();
             Console.WriteLine("Basic order created!");
+
+            Console.Clear();
+            _consolePrintUtils.PrintOnCenterWithColour("Register new order");
+            _consolePrintUtils.PrintWithColour("\n Basic order created!\n");
+            Console.WriteLine();
+            _consolePrintUtils.PrintEmptyColourLine();
+            Thread.Sleep(1500);
 
             order = AddAdditionalOptionToOrder(order);
             _orderStorage.AddOrder(order);
@@ -48,12 +58,12 @@ namespace GadgetStorage.Domain.Facade.OrderFacade
         {
             while (true)
             {
-                Console.Write("select product id: ");
+                _consolePrintUtils.PrintWithColour("\nSelect product id: ");
                 var id = Console.ReadLine();
 
                 if (_productStorage.GetProductById(Convert.ToInt32(id)) == null)
                 {
-                    Console.WriteLine("Invalid product id, please try again.");
+                    _consolePrintUtils.PrintWithColour("Invalid product id, please try again.", ConsoleColor.DarkRed);
                     continue;
                 }
 
@@ -65,49 +75,56 @@ namespace GadgetStorage.Domain.Facade.OrderFacade
         {
             while (true)
             {
-                Console.WriteLine("Please select additional option:");
-                Console.WriteLine("1. Discount");
-                Console.WriteLine("2. Gift Wrapper");
-                Console.WriteLine("3. Shipping Fee");
-                Console.WriteLine("4. Warranty Fee");
-                Console.WriteLine("0. Finish");
+                Console.Clear();
+                _consolePrintUtils.PrintOnCenterWithColour("Register New Order");
+                Console.WriteLine();
+                _consolePrintUtils.PrintWithColour(" 1. Discount\n");
+                _consolePrintUtils.PrintWithColour(" 2. Gift Wrapper\n");
+                _consolePrintUtils.PrintWithColour(" 3. Shipping Fee\n");
+                _consolePrintUtils.PrintWithColour(" 4. Warranty Fee\n");
+                _consolePrintUtils.PrintWithColour(" 0. Finish\n");
+                Console.WriteLine();
+                _consolePrintUtils.PrintEmptyColourLine();
+                Console.WriteLine();
+                _consolePrintUtils.PrintWithColour("Please select additional option: ");
 
                 int choice;
                 while (!int.TryParse(Console.ReadLine(), out choice))
                 {
-                    Console.WriteLine("Invalid input, please try again.");
+                    _consolePrintUtils.PrintWithColour("Invalid input, please try again.", ConsoleColor.DarkRed);
+                    _consolePrintUtils.PrintWithColour("\nPlease select additional option: ");
                 }
 
                 switch (choice)
                 {
                     case 1:
                         Console.Clear();
-                        Console.Write("Enter Discount Percentage: ");
+                        _consolePrintUtils.PrintWithColour("Enter Discount Percentage: ");
                         var discountPercentage = Console.ReadLine();
                         order = new DiscountDecorator(order, Convert.ToDouble(discountPercentage));
                         break;
                     case 2:
                         Console.Clear();
-                        Console.Write("Enter Gift Wrapping Fee: ");
+                        _consolePrintUtils.PrintWithColour("Enter Gift Wrapping Fee: ");
                         var giftWrappingFee = Console.ReadLine();
                         order = new GiftWrapperDecorator(order, Convert.ToDouble(giftWrappingFee));
                         break;
                     case 3:
                         Console.Clear();
-                        Console.Write("Enter Shipping Fee: ");
+                        _consolePrintUtils.PrintWithColour("Enter Shipping Fee: ");
                         var shippingFee = Console.ReadLine();
                         order = new ShippingFeeDecorator(order, Convert.ToDouble(shippingFee));
                         break;
                     case 4:
                         Console.Clear();
-                        Console.Write("Enter Warranty Price: ");
+                        _consolePrintUtils.PrintWithColour("Enter Warranty Price: ");
                         var warrantyPrice = Console.ReadLine();
                         order = new WarrantyDecorator(order, Convert.ToDouble(warrantyPrice));
                         break;
                     case 0:
                         return order;
                     default:
-                        Console.WriteLine("Invalid choice, please try again.");
+                        _consolePrintUtils.PrintWithColour("Invalid choice, please try again.", ConsoleColor.DarkRed);
                         break;
                 }
             }
@@ -115,13 +132,23 @@ namespace GadgetStorage.Domain.Facade.OrderFacade
 
         private void PrintStorageProducts()
         {
-            foreach (var gadget in _productStorage.GetProductsList())
+            var iterator = _productStorage.GetIterator();
+
+            if (!iterator.HasNext())
             {
-                Console.WriteLine("Id: {0} Name: {1}", gadget.Id, gadget.Name);
+                _consolePrintUtils.PrintWithColour($" No orders available!\n\n", ConsoleColor.Red);
             }
+            else
+            {
+                while (iterator.HasNext())
+                {
+                    var gadget = iterator.Next();
+                    _consolePrintUtils.PrintWithColour(string.Format("Id: {0}\tName: {1} ({2}$)\n", gadget.Id, gadget.Name, gadget.Price), ConsoleColor.DarkGray);
+                }
+            }
+
             Console.WriteLine();
-            Console.WriteLine("Type any key to continue ...");
-            Console.ReadLine();
+            _consolePrintUtils.PrintEmptyColourLine();
         }
 
         public void RemoveOrder(IOrder order)

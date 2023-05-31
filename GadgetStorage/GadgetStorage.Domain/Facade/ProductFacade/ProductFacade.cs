@@ -3,6 +3,7 @@ using GadgetStorage.Domain.Builders;
 using GadgetStorage.Domain.Entities;
 using GadgetStorage.Domain.SingletonServices.OrdersStorage;
 using GadgetStorage.Domain.SingletonServices.ProductsStorage;
+using GadgetStorage.Domain.Strategy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,7 @@ namespace GadgetStorage.Domain.Facade.ProductFacade
                 while (iterator.HasNext())
                 {
                     var gadget = iterator.Next();
-                    _consolePrintUtils.PrintWithColour(string.Format("Id: {0}\tName: {1}\n", gadget.Id, gadget.Name), ConsoleColor.DarkGray);
+                    _consolePrintUtils.PrintWithColour(string.Format("Id: {0}\tName: {1} ({2}$)\n", gadget.Id, gadget.Name, gadget.Price), ConsoleColor.DarkGray);
                 }
             }
 
@@ -53,37 +54,51 @@ namespace GadgetStorage.Domain.Facade.ProductFacade
         public void RegisterProduct()
         {
             Console.Clear();
-            Console.WriteLine("Select what you want to add:");
-            Console.WriteLine("1. Phone");
-            Console.WriteLine("2. Tablet");
-            Console.WriteLine("3. SmartWatch");
-            Console.WriteLine("0. Cancel");
+            _consolePrintUtils.PrintOnCenterWithColour("Register New Product");
+            Console.WriteLine();
+            _consolePrintUtils.PrintWithColour(" 1. Phone\n");
+            _consolePrintUtils.PrintWithColour(" 2. Tablet\n");
+            _consolePrintUtils.PrintWithColour(" 3. SmartWatch\n");
+            _consolePrintUtils.PrintWithColour(" 0. Cancel\n");
+            Console.WriteLine();
+            _consolePrintUtils.PrintEmptyColourLine();
+            Console.WriteLine();
+            _consolePrintUtils.PrintWithColour("Select what you want to add: ");
+
 
             int choice;
-            while (!int.TryParse(Console.ReadLine(), out choice))
+            while (true)
             {
-                Console.WriteLine("Invalid input, please try again.");
-            }
+                while (!int.TryParse(Console.ReadLine(), out choice))
+                {
+                    _consolePrintUtils.PrintWithColour("Invalid input, please try again.\n", ConsoleColor.DarkRed);
+                    _consolePrintUtils.PrintWithColour("Select what you want to add: ");
+                }
 
-            switch (choice)
-            {
-                case 1:
-                    addPhone();
-                    break;
-                case 2:
-                    addTablet();
-                    break;
-                case 3:
-                    addSmartWatch();
-                    break;
-                case 0:
-                    return;
-                default:
-                    Console.WriteLine("Invalid choice, please try again.");
-                    break;
+                int exit = 0;
+                switch (choice)
+                {
+                    case 1:
+                        addPhone();
+                        exit = 1;
+                        break;
+                    case 2:
+                        addTablet();
+                        exit = 1;
+                        break;
+                    case 3:
+                        addSmartWatch();
+                        exit = 1;
+                        break;
+                    case 0:
+                        return;
+                    default:
+                        _consolePrintUtils.PrintWithColour("Invalid input, please try again.\n", ConsoleColor.DarkRed);
+                        _consolePrintUtils.PrintWithColour("Select what you want to add: ");
+                        break;
+                }
+                if (exit == 1) break;
             }
-
-            Console.WriteLine();
         }
 
         public void RemoveProduct(AbstractGadget product)
@@ -93,29 +108,31 @@ namespace GadgetStorage.Domain.Facade.ProductFacade
 
         private void addPhone()
         {
-            Console.WriteLine("Enter Phone Details:");
-            Console.Write("Name: ");
+            Console.Clear();
+            _consolePrintUtils.PrintOnCenterWithColour("Enter Phone Details");
+            Console.WriteLine();
+            _consolePrintUtils.PrintWithColour("Name: ");
             string phoneName = Console.ReadLine();
 
-            Console.Write("Brand: ");
+            _consolePrintUtils.PrintWithColour("Brand: ");
             string phoneBrand = Console.ReadLine();
 
-            Console.Write("CPU Model: ");
+            _consolePrintUtils.PrintWithColour("CPU Model: ");
             string phoneCPUModel = Console.ReadLine();
 
-            Console.Write("GPU Model: ");
+            _consolePrintUtils.PrintWithColour("GPU Model: ");
             string phoneGPUModel = Console.ReadLine();
 
-            Console.Write("Display Technology: ");
+            _consolePrintUtils.PrintWithColour("Display Technology: ");
             string phoneDisplayTech = Console.ReadLine();
 
-            Console.Write("Battery Size: ");
+            _consolePrintUtils.PrintWithColour("Battery Size: ");
             string phoneBatterySize = Console.ReadLine();
 
-            Console.Write("Has Camera (True/False): ");
+            _consolePrintUtils.PrintWithColour("Has Camera (True/False): ");
             string phoneHasCamera = Console.ReadLine();
 
-            Console.Write("Price: ");
+            _consolePrintUtils.PrintWithColour("Price: ");
             string phonePrice = Console.ReadLine();
 
             AbstractPhone phone = new PhoneBuilder()
@@ -131,38 +148,42 @@ namespace GadgetStorage.Domain.Facade.ProductFacade
                .Build();
 
             _productStorage.AddProduct(phone);
-            Console.WriteLine("Phone created!");
+            Console.WriteLine();
+            _consolePrintUtils.PrintOnCenterWithColour("Phone created!");
+            Console.WriteLine();
             Thread.Sleep(1000);
         }
 
         private void addTablet()
         {
-            Console.WriteLine("Enter Tablet Details:");
-            Console.Write("Name: ");
+            Console.Clear();
+            _consolePrintUtils.PrintOnCenterWithColour("Enter Tablet Details");
+            Console.WriteLine();
+            _consolePrintUtils.PrintWithColour("Name: ");
             string tabletName = Console.ReadLine();
 
-            Console.Write("Brand: ");
+            _consolePrintUtils.PrintWithColour("Brand: ");
             string tabletBrand = Console.ReadLine();
 
-            Console.Write("CPU Model: ");
+            _consolePrintUtils.PrintWithColour("CPU Model: ");
             string tabletCPUModel = Console.ReadLine();
 
-            Console.Write("GPU Model: ");
+            _consolePrintUtils.PrintWithColour("GPU Model: ");
             string tabletGPUModel = Console.ReadLine();
 
-            Console.Write("Display Technology: ");
+            _consolePrintUtils.PrintWithColour("Display Technology: ");
             string tabletDisplayTech = Console.ReadLine();
 
-            Console.Write("Battery Size: ");
+            _consolePrintUtils.PrintWithColour("Battery Size: ");
             string tabletBatterySize = Console.ReadLine();
 
-            Console.Write("Has Camera (True/False): ");
+            _consolePrintUtils.PrintWithColour("Has Camera (True/False): ");
             string tabletHasCamera = Console.ReadLine();
 
-            Console.Write("Price: ");
+            _consolePrintUtils.PrintWithColour("Price: ");
             string tabletPrice = Console.ReadLine();
 
-            Console.WriteLine("Does the tablet have stylus support? (True/False)");
+            _consolePrintUtils.PrintWithColour("Does the tablet have stylus support? (True/False)");
             string hasStylusSupport = Console.ReadLine();
 
             AbstractTablet tablet = new TabletBuilder()
@@ -178,35 +199,39 @@ namespace GadgetStorage.Domain.Facade.ProductFacade
             .Build();
 
             _productStorage.AddProduct(tablet);
-            Console.WriteLine("Tablet created!");
+            Console.WriteLine();
+            _consolePrintUtils.PrintOnCenterWithColour("Tablet created!");
+            Console.WriteLine();
             Thread.Sleep(1000);
         }
 
         private void addSmartWatch()
         {
-            Console.WriteLine("Enter Smart Watch Details:");
-            Console.Write("Name: ");
+            Console.Clear();
+            _consolePrintUtils.PrintOnCenterWithColour("Enter Smart Watch Details");
+            Console.WriteLine();
+            _consolePrintUtils.PrintWithColour("Name: ");
             string smartWatchName = Console.ReadLine();
 
-            Console.Write("Brand: ");
+            _consolePrintUtils.PrintWithColour("Brand: ");
             string smartWatchBrand = Console.ReadLine();
 
-            Console.Write("CPU Model: ");
+            _consolePrintUtils.PrintWithColour("CPU Model: ");
             string smartWatchCPUModel = Console.ReadLine();
 
-            Console.Write("GPU Model: ");
+            _consolePrintUtils.PrintWithColour("GPU Model: ");
             string smartWatchGPUModel = Console.ReadLine();
 
-            Console.Write("Display Technology: ");
+            _consolePrintUtils.PrintWithColour("Display Technology: ");
             string smartWatchDisplayTech = Console.ReadLine();
 
-            Console.Write("Battery Size: ");
+            _consolePrintUtils.PrintWithColour("Battery Size: ");
             string smartWatchBatterySize = Console.ReadLine();
 
-            Console.Write("Has GPS (True/False): ");
+            _consolePrintUtils.PrintWithColour("Has GPS (True/False): ");
             string smartWatchHasGPS = Console.ReadLine();
 
-            Console.Write("Price: ");
+            _consolePrintUtils.PrintWithColour("Price: ");
             string smartWatchPrice = Console.ReadLine();
 
             AbstractSmartWatch smartWatch = new SmartWatchBuilder()
@@ -222,8 +247,57 @@ namespace GadgetStorage.Domain.Facade.ProductFacade
                 .Build();
 
             _productStorage.AddProduct(smartWatch);
-            Console.WriteLine("SmartWatch created!");
+            Console.WriteLine();
+            _consolePrintUtils.PrintOnCenterWithColour("SmartWatch created!");
+            Console.WriteLine();
             Thread.Sleep(1000);
+        }
+
+        public void SortProducts()
+        {
+            string option;
+            ISortStrategy strategy = null;
+
+            while (true)
+            {
+                Console.Clear();
+                _consolePrintUtils.PrintOnCenterWithColour("Sort Products");
+                Console.WriteLine();
+
+                _consolePrintUtils.PrintWithColour("1 - Name Sort Strategy\n");
+                _consolePrintUtils.PrintWithColour("2 - Price Sort Strategy\n");
+                _consolePrintUtils.PrintWithColour("0 - Cancel\n");
+
+                Console.WriteLine();
+                _consolePrintUtils.PrintEmptyColourLine();
+                _consolePrintUtils.PrintWithColour("\nSelect option: ");
+                option = Console.ReadLine();
+
+                switch (option)
+                {
+                    case "1":
+                        strategy = new NameSortStrategy();
+                        break;
+                    case "2":
+                        strategy = new PriceSortStrategy();
+                        break;
+                }
+                
+                if (strategy != null)
+                {
+                    break;
+                }
+            }
+            
+            AbstractSorter sorter = new Sorter(strategy);
+            sorter.Sort(_productStorage.GetProductsList());
+
+            Console.Clear();
+            _consolePrintUtils.PrintOnCenterWithColour("Sort Products");
+            _consolePrintUtils.PrintWithColour("\n Products was sorted successfully!\n");
+            Console.WriteLine();
+            _consolePrintUtils.PrintEmptyColourLine();
+            Thread.Sleep(1500);
         }
     }
 }

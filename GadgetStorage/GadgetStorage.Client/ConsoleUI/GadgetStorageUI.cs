@@ -21,7 +21,7 @@ namespace GadgetStorage.Client.ConsoleUI
                 " |   ,'.   |\\   --.|  |\\ `--.' '-' '|  |  |  |\\   --.    `--'  \r\n" +
                 " '--'   '--' `----'`--' `---' `---' `--`--`--' `----'    .--.  \r\n" +
                 "                                                         '--'  ");
-            Thread.Sleep(1000);
+            Thread.Sleep(1500);
 
             var init = new Initialization();
             init.Run();

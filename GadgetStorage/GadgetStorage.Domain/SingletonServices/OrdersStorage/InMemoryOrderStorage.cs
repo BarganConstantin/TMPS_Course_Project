@@ -22,7 +22,6 @@ namespace GadgetStorage.Domain.SingletonServices.OrdersStorage
         {
             List<IOrder> orders = GetInstance();
             _storeOrder.Save(order, orders);
-            orders.Add(order);
         }
 
         public override List<IOrder> GetOrdersList()
