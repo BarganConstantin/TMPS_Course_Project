@@ -4,11 +4,11 @@ Course Project for Software Design Techniques and Mechanisms course at Technical
 # Table of Contents
 
 1. [Introduction](#introduction)
-2. [Creational Design Patterns](#creational-design-patterns)
-   - [Builder Pattern](#Builder-Pattern)🏗️
-   - [Prototype Pattern](#Prototype-Pattern) 🧬
-   - [Singleton Pattern](#Singleton-Pattern) 🔒
-   - [Factory Method Pattern](#Factory-Method-Pattern) 🏭
+2. [Creational Design Patterns](#%EF%B8%8F-creational-design-patterns)
+   - [Builder Pattern](#%EF%B8%8F-builder-pattern)🏗️
+   - [Prototype Pattern](#-prototype-pattern) 🧬
+   - [Singleton Pattern](#-singleton-pattern) 🔒
+   - [Factory Method Pattern](#-factory-method-pattern) 🏭
 3. [Structural Design Patterns](#Structural-Design-Patterns)
    - [Decorator Pattern](#Decorator-Pattern) 🎨
    - [Composite Pattern](#Composite-Pattern) 🌳
