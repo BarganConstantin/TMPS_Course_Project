@@ -149,17 +149,6 @@ To clone an object using the Prototype pattern, we can instantiate the respectiv
 
 The Prototype pattern provides several benefits in the GadgetStorage application. It allows us to create new gadgets by cloning existing ones, avoiding the need to create objects from scratch. It provides a way to create variations of gadgets with different property values while keeping the construction logic centralized in the builder classes. It also improves performance by avoiding the overhead of repeated object initialization.
 
-To visualize the implementation of the Prototype pattern in the GadgetStorage application, you can refer to the UML diagram below:
-
-<div align="center">
-  <kbd>
-    <img src="https://user-images.githubusercontent.com/60443226/164970200-7e2c3923-48c4-4b81-8f77-2b0ba18ddcda.png" alt="MarineGEO circle logo"/>
-  </kbd>
-</div>
-<br/>
-
-The diagram illustrates the relationships between the prototype interfaces (`IPhonePrototype`, `ISmartWatchPrototype`, `ITabletPrototype`) and their corresponding implementation classes (`PhonePrototype`, `SmartWatchPrototype`, `TabletPrototype`). The builder classes (`PhoneBuilder`, `SmartWatchBuilder`, `TabletBuilder`) are responsible for constructing the cloned objects based on the prototype's properties.
-
 By utilizing the Prototype pattern, the GadgetStorage application achieves a flexible and efficient way of creating new gadgets by cloning existing ones. This design approach simplifies the process of adding new gadget types and configurations in the future.
 
 ## 🔒 Singleton Pattern
