@@ -191,7 +191,7 @@ To visualize the implementation of the Singleton pattern in the GadgetStorage ap
 
 <div align="center">
   <kbd>
-    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/dc071b32-5c76-47aa-9c23-09b836e59623" alt="MarineGEO circle logo"/>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/2bb08639-7b54-433b-8a6f-736828c2b7b8" alt="MarineGEO circle logo"/>
   </kbd>
 </div>
 <br/>
