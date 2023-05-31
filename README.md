@@ -18,8 +18,8 @@ Course Project for Software Design Techniques and Mechanisms course at Technical
    - [Iterator Pattern](#-iterator-pattern)🔍
    - [Strategy Pattern](#-strategy-pattern) 💡
    - [Template Method Pattern](#-template-method-pattern)📝
-5. [Implementation](#Implementation)
-6. [Conclusion](#Conclusion)
+5. [Conslusion](#conslusion)
+6. [Application Interface](#application-overview)
 
 # Introduction
 
