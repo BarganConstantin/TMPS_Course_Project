@@ -92,7 +92,14 @@ To visualize the implementation of the Builder pattern in the GadgetStorage appl
 
 <div align="center">
   <kbd>
-    <img src="https://user-images.githubusercontent.com/60443226/164970200-7e2c3923-48c4-4b81-8f77-2b0ba18ddcda.png" alt="MarineGEO circle logo"/>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/f48d5708-19ec-40ac-a8a9-15c27e202ba8" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
+
+<div align="center">
+  <kbd>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/4d2ff394-2648-4374-b8a3-2964ed823eff" alt="MarineGEO circle logo"/>
   </kbd>
 </div>
 <br/>
