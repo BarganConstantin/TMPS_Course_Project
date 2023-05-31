@@ -9,15 +9,15 @@ Course Project for Software Design Techniques and Mechanisms course at Technical
    - [Prototype Pattern](#-prototype-pattern) 🧬
    - [Singleton Pattern](#-singleton-pattern) 🔒
    - [Factory Method Pattern](#-factory-method-pattern) 🏭
-3. [Structural Design Patterns](#Structural-Design-Patterns)
-   - [Decorator Pattern](#Decorator-Pattern) 🎨
-   - [Composite Pattern](#Composite-Pattern) 🌳
-   - [Facade Pattern](#Facade-Pattern) 🏰
-   - [Adapter Pattern](#Adapter-Pattern) 🔌
-4. [Behavioral Design Patterns](#Behavioral-Design-Patterns)
-   - [Iterator Pattern](#Iterator-Pattern)🔍
-   - [Strategy Pattern](#Strategy-Pattern) 💡
-   - [Template Method Pattern](#Template-Method-Pattern)📝
+3. [Structural Design Patterns](#%EF%B8%8F-structural-design-patterns)
+   - [Decorator Pattern](#-decorator-pattern) 🎨
+   - [Composite Pattern](#-composite-pattern) 🌳
+   - [Facade Pattern](#-facade-pattern) 🏰
+   - [Adapter Pattern](#-adapter-pattern) 🔌
+4. [Behavioral Design Patterns](#-behavioral-design-patterns)
+   - [Iterator Pattern](#-iterator-pattern)🔍
+   - [Strategy Pattern](#-strategy-pattern) 💡
+   - [Template Method Pattern](#-template-method-pattern)📝
 5. [Implementation](#Implementation)
 6. [Conclusion](#Conclusion)
 
