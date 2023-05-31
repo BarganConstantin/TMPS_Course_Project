@@ -227,7 +227,7 @@ To visualize the implementation of the Factory Method pattern in the GadgetDeliv
 
 <div align="center">
   <kbd>
-    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/5a1dcbec-870c-4508-a774-fedc1ea779a2" alt="MarineGEO circle logo"/>
+    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/dd8bd443-a6c4-4112-9727-8991e4843c64" alt="MarineGEO circle logo"/>
   </kbd>
 </div>
 <br/>
