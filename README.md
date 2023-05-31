@@ -139,7 +139,12 @@ The Prototype pattern provides several benefits in the GadgetStorage application
 
 To visualize the implementation of the Prototype pattern in the GadgetStorage application, you can refer to the UML diagram below:
 
-![Prototype Pattern UML Diagram](https://chat.openai.com/c/path_to_prototype_pattern_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/164970200-7e2c3923-48c4-4b81-8f77-2b0ba18ddcda.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 The diagram illustrates the relationships between the prototype interfaces (`IPhonePrototype`, `ISmartWatchPrototype`, `ITabletPrototype`) and their corresponding implementation classes (`PhonePrototype`, `SmartWatchPrototype`, `TabletPrototype`). The builder classes (`PhoneBuilder`, `SmartWatchBuilder`, `TabletBuilder`) are responsible for constructing the cloned objects based on the prototype's properties.
 
@@ -250,7 +255,12 @@ By using the Decorator pattern, the GadgetDelivery application allows for flexib
 
 To visualize the implementation of the Decorator pattern in the GadgetDelivery application, the following UML diagram illustrates the relationships between the order and decorator classes:
 
-![Decorator Pattern UML Diagram](https://chat.openai.com/c/path_to_decorator_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/233807006-6b1661e5-6a49-491b-916f-8732765afa26.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `IOrder` represents the interface for orders, `BasicOrder` is the core implementation, and `OrderDecorator` is the base decorator class implementing the `IOrder` interface. The concrete decorators, such as `DiscountDecorator`, `GiftWrapperDecorator`, `ShippingFeeDecorator`, and `WarrantyDecorator`, extend the `OrderDecorator` class and modify the behavior by adding features.
 
@@ -264,7 +274,12 @@ The `ParcelComponent` class defines common methods and properties for both produ
 
 To visualize the implementation of the Composite pattern in the GadgetDelivery application, the following UML diagram illustrates the relationships between the component classes:
 
-![Composite Pattern UML Diagram](https://chat.openai.com/c/path_to_factory_method_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/233806493-12298285-8037-4027-9b6b-9c2dcfa932af.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `ParcelComponent` is the base component class, `Product` is the leaf component class representing a single product, and `Pack` is the composite component class representing a pack of components.
 
@@ -311,7 +326,12 @@ By providing these simplified interfaces, clients can use the functionality of t
 
 Below is a UML diagram that illustrates the structure of the Facade pattern in this project:
 
-![Composite Pattern UML Diagram](https://chat.openai.com/c/path_to_factory_method_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/233806513-62c58a12-fb4e-422a-bc13-1cc540d0eb55.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 Here's an example of how the Facade pattern is used in the GadgetDelivery application:
 
@@ -345,7 +365,12 @@ The adapter class delegates the calls from the `IConsolePrintUtils` methods to t
 
 To visualize the implementation of the Adapter pattern in the GadgetDelivery application, the following UML diagram illustrates the relationships between the adapter and utility interfaces:
 
-![Adpater Pattern UML Diagram](https://chat.openai.com/c/path_to_factory_method_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/233806529-2048985d-3b44-41e9-abbb-837862d5052f.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `IConsolePrintUtils` represents the print utility interface, `IConsoleUtils` represents the existing console utility interface, and `ConsoleUtils` is the concrete implementation of the existing console utility class. The `ConsolePrintUtilsAdapter` acts as the adapter and adapts the `IConsolePrintUtils` interface to the `IConsoleUtils` interface by implementing `IConsolePrintUtils` and delegating calls to `IConsoleUtils`.
 
@@ -394,7 +419,12 @@ By using the Iterator pattern, the `InMemoryProductStorage` class encapsulates t
 
 Here's a simplified UML diagram to illustrate the relationships involved in the Iterator pattern implementation:
 
-![Iterator Pattern UML Diagram](https://chat.openai.com/c/path_to_factory_method_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/235783490-135086dd-43f6-465f-8790-5a156c2b7b64.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `IProductIterator` represents the iterator interface, `ProductIterator` is the concrete iterator class, and `InMemoryProductStorage` is the aggregate object that provides the iterator implementation.
 
@@ -419,7 +449,12 @@ By using the Strategy pattern, the `Sorter` class encapsulates the sorting algor
 
 Here's a UML diagram to illustrate the relationships involved in the Strategy pattern implementation:
 
-![Adpater Pattern UML Diagram](https://chat.openai.com/c/path_to_factory_method_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/235783574-e81dc6d0-5b0a-42f7-9413-5e630cae3605.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `ISortStrategy` represents the strategy interface, `NameSortStrategy` and `PriceSortStrategy` are the concrete strategy classes, `AbstractSorter` is the abstract class that defines the context, and `Sorter` is the concrete class that provides the context implementation.
 
@@ -445,7 +480,12 @@ By using the Template Method pattern, the `AbstractOrderSaveTemplate` class defi
 
 Here's a UML diagram to illustrate the relationships involved in the Template Method pattern implementation:
 
-![Template Method Pattern UML Diagram](https://chat.openai.com/c/path_to_factory_method_uml_diagram.png)
+<div align="center">
+  <kbd>
+    <img src="https://user-images.githubusercontent.com/60443226/235783649-ec3b0c95-35ca-46c5-80a3-d3fb36c72fb6.png" alt="MarineGEO circle logo"/>
+  </kbd>
+</div>
+<br/>
 
 In the diagram, `AbstractOrderSaveTemplate` represents the abstract template class, and `BasicStoreOrderLogic` is the concrete subclass that provides specific implementations for the abstract methods.
 
