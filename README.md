@@ -168,12 +168,7 @@ The same Singleton pattern implementation is applied to the `AbstractProductStor
 
 To visualize the implementation of the Singleton pattern in the GadgetStorage application, the following UML diagram illustrates the relationships between the storage classes and their interactions:
 
-<div align="center">
-  <kbd>
-    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/2bb08639-7b54-433b-8a6f-736828c2b7b8" alt="MarineGEO circle logo"/>
-  </kbd>
-</div>
-<br/>
+[![MarineGEO circle logo](https://private-user-images.githubusercontent.com/60443226/242285810-2bb08639-7b54-433b-8a6f-736828c2b7b8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJrZXkxIiwiZXhwIjoxNjg2MjAxMTczLCJuYmYiOjE2ODYyMDA4NzMsInBhdGgiOiIvNjA0NDMyMjYvMjQyMjg1ODEwLTJiYjA4NjM5LTdiNTQtNDMzYi04YTZmLTczNjgyOGMyYjdiOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMwNjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMDYwOFQwNTA3NTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02OTk2MTVlZDUwNmZkYzY0OWU5NDZjMjE0MDE4MjQzYWQzNDI5MzcxN2E5NDM3NzdiMmJjYTc3Mzg3MjNjMjU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.xTRGi6VtfLQ4_7Zzb4hPJANyjkhu560tGuj30yJHB1A)](https://private-user-images.githubusercontent.com/60443226/242285810-2bb08639-7b54-433b-8a6f-736828c2b7b8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJrZXkxIiwiZXhwIjoxNjg2MjAxMTczLCJuYmYiOjE2ODYyMDA4NzMsInBhdGgiOiIvNjA0NDMyMjYvMjQyMjg1ODEwLTJiYjA4NjM5LTdiNTQtNDMzYi04YTZmLTczNjgyOGMyYjdiOC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMwNjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMDYwOFQwNTA3NTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02OTk2MTVlZDUwNmZkYzY0OWU5NDZjMjE0MDE4MjQzYWQzNDI5MzcxN2E5NDM3NzdiMmJjYTc3Mzg3MjNjMjU4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.xTRGi6VtfLQ4_7Zzb4hPJANyjkhu560tGuj30yJHB1A)
 
 In the diagram, `AbstractOrderStorage` and `AbstractProductStorage` serve as the singleton classes that manage the instances of the `_orders` and `_gadgets` lists respectively. The concrete classes, `InMemoryOrderStorage` and `InMemoryProductStorage`, implement the specific storage logic and utilize the singleton instance.
 
@@ -204,12 +199,7 @@ The same pattern is applied to the `RoadLogistics` and `SeaLogistics` classes, w
 
 To visualize the implementation of the Factory Method pattern in the GadgetDelivery application, the following UML diagram illustrates the relationships between the logistics and transport classes:
 
-<div align="center">
-  <kbd>
-    <img src="https://github.com/BarganConstantin/TMPS_Course_Project/assets/60443226/f932c9ae-c264-4083-b926-5b02f3727b43" alt="MarineGEO circle logo"/>
-  </kbd>
-</div>
-<br/>
+[![MarineGEO circle logo](https://private-user-images.githubusercontent.com/60443226/242292111-f932c9ae-c264-4083-b926-5b02f3727b43.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJrZXkxIiwiZXhwIjoxNjg2MjAxMTczLCJuYmYiOjE2ODYyMDA4NzMsInBhdGgiOiIvNjA0NDMyMjYvMjQyMjkyMTExLWY5MzJjOWFlLWMyNjQtNDA4My1iOTI2LTViMDJmMzcyN2I0My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMwNjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMDYwOFQwNTA3NTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xNjE2MDlkZjliM2IyZmM0MjZmMmQ3MDgxYTk4N2JiNzA0MzBhMjViYTU3N2E2NzY0YzY5ZDJhNjI1OTIyMmY5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.m0pyiqYHsLQdCJJIdPQ8dMtw1hRlsNvn9-FwrLgSMac)](https://private-user-images.githubusercontent.com/60443226/242292111-f932c9ae-c264-4083-b926-5b02f3727b43.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXkiOiJrZXkxIiwiZXhwIjoxNjg2MjAxMTczLCJuYmYiOjE2ODYyMDA4NzMsInBhdGgiOiIvNjA0NDMyMjYvMjQyMjkyMTExLWY5MzJjOWFlLWMyNjQtNDA4My1iOTI2LTViMDJmMzcyN2I0My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBSVdOSllBWDRDU1ZFSDUzQSUyRjIwMjMwNjA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDIzMDYwOFQwNTA3NTNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xNjE2MDlkZjliM2IyZmM0MjZmMmQ3MDgxYTk4N2JiNzA0MzBhMjViYTU3N2E2NzY0YzY5ZDJhNjI1OTIyMmY5JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.m0pyiqYHsLQdCJJIdPQ8dMtw1hRlsNvn9-FwrLgSMac)
 
 In the diagram, `AbstractLogistics` serves as the creator class with the factory method `createTransport()`. The concrete creator classes, such as `AirLogistics`, `RoadLogistics`, and `SeaLogistics`, override the factory method to create specific transport objects. The transport classes, `Plane`, `Truck`, and `Ship`, implement the `ITransport` interface.
 
